@@ -24,7 +24,7 @@ class CategoryParserAction{
             foreach($sub_category as $value) {
                 foreach($value as $date => $position){
                     if(array_key_exists($date, $maxPos)){
-                        if($maxPos[$date] > $position && $position !== null) {
+                        if($maxPos[$date] > $position && $position !== null || $maxPos[$date] === null) {
                             $maxPos[$date] = $position;
                         }
                     }
